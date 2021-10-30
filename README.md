@@ -85,6 +85,7 @@
 | [lethal233](players/Laser丶ppl/) | 总排名第 163 | 签到题、进制十六——参上、去吧！追寻自由的电波、卖瓜、透明的文件、FLAG 助力大红包、图之上的信息、Easy RSA|
 | [bjrjk](players/bjrjk/writeup.md) | 总排名第 157 | 签到题、进制十六——参上、去吧！追寻自由的电波、猫咪问答ProMax、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia、图之上的信息、Easy RSA|
 | [hzqmwne](players/hzqmwne/README.md) | 总排名第 3 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房（Level 0、Level 1）、灯，等灯等灯（Level 0）、只读文件系统、一石二鸟、Micro World、卷王与野生的 GPA、阵列恢复大师、助记词（第一顿大餐）、Co-Program、马赛克、minecRaft、密码生成器、fzuu、p😭q、超 OI 的 Writeup 模拟器|
+| [xuyichang](players/xuyichang/readme.md) | 总排名68 | 签到题、进制十六——参上、去吧！追寻自由的电波、猫咪问答ProMax、买瓜、透明的文件、旅行照片、FLAG助力大红包、Amnesia第一问、图之上的信息、EasyRSA、赛博厨房前两问、MinecRaft、p😭q、超OI的Writeup模拟器第一问 |
 
 ## 其他资源
 
