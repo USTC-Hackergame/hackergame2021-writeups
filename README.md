@@ -83,6 +83,7 @@
 | [風的影子](players/windshadow/) | 总排名第 32 | 签到题、去吧！追寻自由的电波、猫咪问答、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、图之上的信息、Easy RSA、加密的 U 盘、Micro World、马赛克、minecRaft、p😭q|
 | [std::_Rb_tree](players/rbtree) | 总排名第 27 | 透明文件, FLAG 助力大红包, Amnesia, Easy RSA, 助记词, 马赛克, 灯，等灯等灯, Micro World, 阵列恢复带师, minecRaft, p😭q |
 | [lethal233](players/Laser丶ppl/) | 总排名第 163 | 签到题、进制十六——参上、去吧！追寻自由的电波、卖瓜、透明的文件、FLAG 助力大红包、图之上的信息、Easy RSA|
+| [bjrjk](players/bjrjk/writeup.md) | 总排名第 157 | 签到题、进制十六——参上、去吧！追寻自由的电波、猫咪问答ProMax、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia、图之上的信息、Easy RSA|
 
 ## 其他资源
 
