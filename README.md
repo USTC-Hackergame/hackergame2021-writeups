@@ -68,6 +68,7 @@
 | [Frankss](players/Frankss/README.md) | 总排名第11名 | 进制十六—参上 超OI的writeup模拟器 |
 | [poscat](players/poscat) | | p😭q, Easy RSA, 去吧！追寻自由的电波
 | [rvfg](players/rvfg/) | 总排名第 23 名 | Amnesia/记忆清除 |
+| [Kotoki1337](players/Kotoki1337/) | 总排名 #259 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，图之上的信息 |
 
 ## 其他资源
 
