@@ -64,6 +64,7 @@
 | [bipy](players/bipy/) | 总排名第 55 名 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，Amnesia{轻度失忆}，图之上的信息，Easy RSA，加密的 U 盘，赛博厨房{Level 0，Level 1}，助记词{第一顿大餐}，马赛克，minecRaft |
 | [chuangzhu](https://melty.land/blog/ustclug-hackergame-2021-write-up) | | 签到、猫咪问答 Pro Max、进制十六——参上、去吧！追寻自由的电波、透明的文件、赛博厨房、Level 0、Level 1、FLAG 助力大红包、图之上的信息、卖瓜、加密的 U 盘、旅行照片、阵列恢复大师、p😭q、Amnesia |
 | [ForeverTime20](https://forevertime.site/ustc-hacker-game-2021-write-up/) | | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，旅行照片，外星人的音游掌机 |
+| [Intary](players/Intary/README.md) | 总排名第 242 名 | 签到, 进制十六——参上, 去吧！追寻自由的电波, 猫咪问答 Pro Max, 卖瓜, 透明的文件, 图之上的信息 |
 
 ## 其他资源
 
