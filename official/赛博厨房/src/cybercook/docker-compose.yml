@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  cybercook:
+    restart: always
+    build: .
+    ports:
+      - "12077:80"
+    mem_limit: 2048M
+    memswap_limit: 2048M

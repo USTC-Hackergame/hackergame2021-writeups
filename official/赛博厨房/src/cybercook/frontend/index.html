@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1300, initial-scale=1">
+    <title>CyberCook</title>
+    <link rel="stylesheet" href="static/pure.min.css">
+    <link rel="stylesheet" href="static/main.css">
+    <script src="static/axios.min.js"></script>
+    <script src="static/vue.min.js"></script>
+    <script src="static/dist/cybercook-bundle.js"></script>
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- 地图 -->
+      <div :style="{...psStyle(4, 4, 302, 1212), ...borderStyle()}">
+        <div :style="{...psStyle(0, 0, 300, 1210), clipPath: 'inset(0)', cursor: 'grab'}" v-on:mousedown="mapMouseDown">
+          <div :style="{...positionStyle(height/2-centerRow*scale-scale/2, width/2-centerColumn*scale-scale/2)}">
+            <div v-for="(rowData,row) in state.map" :key="row" :style="{...positionStyle(row*scale, 0)}">
+              <div v-for="(data,column) in rowData" :key="column" :style="{...positionStyle(0, column*scale)}" v-on:mouseover="hover={row,column,data}" v-on:mouseout="hover=null">
+                <div v-for="(sprite,index) in getSprites(data)" :key="index" :style="{...spriteStyle(scale, scale, sprite)}"></div>
+                <div v-if="row===state.posRow && column===state.posColumn" :style="{...spriteStyle(scale, scale, spriteMap.Position)}"></div>
+                <div v-if="hover && row===hover.row && column===hover.column" :style="{...spriteStyle(scale, scale, spriteMap.Hover)}"></div>
+                <div :style="{...psStyle(0, 0, scale, scale)}"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 提示 -->
+      <div :style="{...psStyle(310, 4, 602, 200)}">
+
+        <!-- 菜谱 -->
+        <div :style="{...psStyle(0, 0, 94, 200), ...borderStyle()}">
+          <pre style="margin: 0; white-space: pre-wrap">{{ `第 ${level} 关 第 ${day} 天\n今日菜谱物品 ID：${state.recipe.join(',')}` }}</pre>
+        </div>
+
+        <!-- 手上物品 -->
+        <div :style="{...psStyle(98, 0, 250, 200), ...borderStyle()}">
+          <pre style="margin: 0; white-space: pre-wrap">{{ `当前位置：(${state.posRow},${state.posColumn})`+'\n'+getInventoryText(state.inventory) }}</pre>
+        </div>
+
+        <!-- 悬浮提示 -->
+        <div :style="{...psStyle(352, 0, 250, 200), ...borderStyle()}">
+          <pre v-show="hover" style="margin: 0; white-space: pre-wrap">{{ hover && getHover(hover.data) }}</pre>
+        </div>
+
+      </div>
+
+      <!-- 执行记录 -->
+      <div :style="{...psStyle(310, 208, 602, 300), ...borderStyle()}">
+        <span :style="{...positionStyle(4, 4), fontWeight: 'bold'}">程序执行记录</span>
+        <div :style="{...psStyle(34, 0, 532, 298), overflowY: 'scroll'}">
+          <div v-for="(item,index) in history" :key="index" :style="{width: '278px', marginTop: '8px', backgroundColor: historyIndex===index?'#ccc':'#fff', cursor: 'pointer'}" v-on:click="historyIndex=index">
+            <span>第 {{ item.pc }} 行：{{ item.action }}</span>
+          </div>
+        </div>
+        <span :style="{...psStyle(570, 4, 26, 290), ...borderStyle(), backgroundColor: historyIndex===null?'#ccc':'#fff', cursor: 'pointer'}" v-on:click="historyIndex=null">显示最新状态</span>
+      </div>
+
+      <!-- 程序列表 -->
+      <div :style="{...psStyle(310, 512, 602, 300), ...borderStyle()}">
+        <span :style="{...positionStyle(4, 4), fontWeight: 'bold'}">程序列表 {{ programs.length }} / {{ CyberCook.maxProgram }}</span>
+        <div :style="{...psStyle(34, 0, 566, 298), overflowY: 'scroll'}">
+          <div v-for="(item,index) in programs" :key="index" :style="{...psStyle(index*34, 0, 34, 278)}">
+            <span :style="{...psStyle(4, 4, 24, 40), ...borderStyle(), textAlign: 'center', cursor: 'pointer'}" v-on:click="editorName=item.name;editorContent=item.content">打开</span>
+            <span :style="{...psStyle(4, 54, 24, 40), ...borderStyle(), textAlign: 'center', cursor: 'pointer'}" v-on:click="programs.splice(index,1)">删除</span>
+            <span v-if="item.learned" :style="{...psStyle(4, 104, 24, 40), ...borderStyle(), textAlign: 'center', cursor: 'pointer'}" v-on:click="runProgram(item)">执行</span>
+            <span v-if="!item.learned" :style="{...psStyle(4, 94, 24, 60), color: '#888', textAlign: 'center'}">学习中</span>
+            <span :style="{...positionStyle(4, 154)}">{{ item.name }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 编辑器 -->
+      <div :style="{...psStyle(310, 816, 602, 400), ...borderStyle()}">
+        <span :style="{...positionStyle(4, 4), fontWeight: 'bold'}">编写程序</span>
+        <textarea v-model="editorContent" :style="{...psStyle(34, 0, 502, 398), overflowY: 'scroll', whiteSpace: 'pre-warp'}"></textarea>
+        <span :style="{...positionStyle(540, 4)}">程序名：</span>
+        <input v-model="editorName" :style="{...psStyle(540, 70, 26, 328)}">
+        <span :style="{...psStyle(570, 4, 26, 193), ...borderStyle(), cursor: 'pointer', textAlign: 'center'}" v-on:click="saveProgram">保存</span>
+        <span :style="{...psStyle(570, 201, 26, 193), ...borderStyle(), cursor: 'pointer', textAlign: 'center'}" v-on:click="nextDay">下一天</span>
+      </div>
+
+    </div>
+    <script>
+      const spritesUrl = 'static/sprites.png';
+      const spritesHeight = 96;
+      const spritesWidth = 160;
+      const spriteMap = {
+        ItemStack: [0, 0, 32, 32],
+        Plate: [0, 32, 32, 32],
+        Pot: [0, 64, 32, 32],
+        Position: [0, 96, 32, 32],
+        Hover: [0, 128, 32, 32],
+        Item: Array(256).fill(0).map((_, i) => i <= 3 ? [32, i*32, 32, 32] : [32, 4*32, 32, 32]),
+        ItemFaucet: Array(256).fill(0).map((_, i) => i <= 3 ? [64, i*32, 32, 32] : [64, 4*32, 32, 32]),
+      };
+      const initialLevel = Number(decodeURIComponent(location.hash.slice(1)));
+      let token = new URLSearchParams(window.location.search).get('token');
+      window.history.replaceState({}, '', '/'+location.hash);
+      if (token) {
+        localStorage.setItem('token', token);
+      } else {
+        token = localStorage.getItem('token');
+      }
+      if (!token) {
+        token = prompt('Token: ');
+        localStorage.setItem('token', token);
+      }
+      const initialPrograms = [
+        {name: '示例 1', learned: true, indexInBackup: 0, content: '向右 1 步\n拿起 1 个物品\n向下 2 步\n放下 1 个物品\n向下 1 步\n放下盘子'},
+        {name: '示例 2', learned: true, indexInBackup: 1, content: '向右 1 步\n拿起 10 个物品\n向下 1 步\n向左 1 步\n放下 1 个物品'},
+        {name: '示例 3', learned: true, indexInBackup: 2, content: '向右 1 步\n拿起 5 个物品\n向下 1 步\n放下 1 个物品\n如果手上的物品大于等于 3 向上跳转 2 行\n放下盘子'}
+      ];
+      const initialVm = CyberCook.nextDay(initialLevel, initialPrograms.map(i => i.content));
+      app = new Vue({
+        el: "#app",
+        data: {
+          level: initialLevel,
+          day: 0,
+          vm: initialVm,
+          historyVm: null,
+          centerRow: initialVm.info().posRow,
+          centerColumn: initialVm.info().posColumn,
+          scale: 32,
+          width: 1210,
+          height: 300,
+          dragX: 0,
+          dragY: 0,
+          hover: null,
+          programs: initialPrograms,
+          programsBackup: [...initialPrograms],
+          programExecutions: [],
+          history: [],
+          historyIndex: null,
+          editorName: '',
+          editorContent: '',
+        },
+        computed: {
+          state() {
+            if (this.historyIndex === null) {
+              return this.vm.info();
+            } else {
+              return CyberCook.historyStep(this.historyVm, this.history.slice(0, this.historyIndex+1).map(i => i.action).join('\n')).vm.info();
+            }
+          },
+        },
+        methods: {
+          positionStyle(top, left) {
+            return {
+              position: 'absolute',
+              top: top+'px',
+              left: left+'px',
+            };
+          },
+          sizeStyle(height, width) {
+            return {
+              height: height+'px',
+              width: width+'px',
+            };
+          },
+          psStyle(top, left, height, width) {
+            return {
+              ...this.positionStyle(top, left),
+              ...this.sizeStyle(height, width),
+            };
+          },
+          borderStyle() {
+            return {
+              border: '1px solid #000',
+            };
+          },
+          spriteStyle(tHeight, tWidth, [sTop, sLeft, sHeight, sWidth]) {
+            const hScale = tWidth / sWidth;
+            const vScale = tHeight / sHeight;
+            return {
+              ...this.positionStyle(0, 0),
+              ...this.sizeStyle(tHeight, tWidth),
+              background: `url('${spritesUrl}') ${-sLeft*hScale}px ${-sTop*vScale}px`,
+              backgroundSize: `${spritesWidth*hScale}px ${spritesHeight*vScale}px`,
+            };
+          },
+          getSprites(x) {
+            if (x.type === 'ItemStack') {
+              if (x.withPlate) {
+                if (x.items.count) {
+                  return [spriteMap.ItemStack, spriteMap.Plate, spriteMap.Item[x.items.itemId]];
+                } else {
+                  return [spriteMap.ItemStack, spriteMap.Plate];
+                }
+              } else {
+                return [spriteMap.ItemStack];
+              }
+            } else if (x.type === 'ItemFaucet') {
+              return [spriteMap.ItemStack, spriteMap.ItemFaucet[x.items.itemId]];
+            } else if (x.type === 'Pot') {
+              return [spriteMap.ItemStack, spriteMap.Pot];
+            } else {
+              return [];
+            }
+          },
+          getInventoryText(x) {
+            if (x.type === 'ItemStack') {
+              if (x.withPlate) {
+                if (x.items.count) {
+                  return `手上有盘子\n物品 ID：${x.items.itemId}\n物品数量：${x.items.count}\n\n可以放下物品\n可以拿起物品（同 ID）\n可以放下盘子\n不能拿起盘子`;
+                } else {
+                  return '手上有空盘子\n\n不能放下物品\n可以拿起物品（任何 ID）\n可以放下盘子\n不能拿起盘子';
+                }
+              } else {
+                return '手上没有盘子\n\n可以放下物品\n可以拿起物品（但食物会被弄脏而浪费掉）\n不能放下盘子\n可以拿起盘子';
+              }
+            } else {
+              return '???';
+            }
+          },
+          getHover(x) {
+            if (x.type === 'ItemStack') {
+              if (x.withPlate) {
+                if (x.items.count) {
+                  return `盘子\n物品 ID：${x.items.itemId}\n物品数量：${x.items.count}\n\n可以放下物品（同 ID）\n可以拿起物品\n不能放下盘子\n可以拿起盘子`;
+                } else {
+                  return '空盘子\n\n可以放下物品\n不能拿起物品\n不能放下盘子\n可以拿起盘子';
+                }
+              } else {
+                return '空地\n\n可以放下物品（但食物会被弄脏而浪费掉）\n不能拿起物品\n可以放下盘子\n不能拿起盘子';
+              }
+            } else if (x.type === 'ItemFaucet') {
+              return `物品源\n物品 ID：${x.items.itemId}\n物品数量：无限\n\n可以放下物品（任何 ID）\n可以拿起物品\n不能放下盘子\n不能拿起盘子`;
+            } else if (x.type === 'Pot') {
+              return `锅\n今日菜谱物品 ID：${x.extra.recipe.join(',')}\n已放入物品 ID：${x.extra.itemsInPot.join(',')}\n\n可以放下物品（一次一个）\n不能拿起物品\n不能放下盘子\n不能拿起盘子`;
+            } else {
+              return '???';
+            }
+          },
+          mapMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            this.dragX = e.clientX;
+            this.dragY = e.clientY;
+            document.onmouseup = () => {
+              document.onmouseup = null;
+              document.onmousemove = null;
+            };
+            document.onmousemove = (e) => {
+              e = e || window.event;
+              e.preventDefault();
+              this.centerRow += (this.dragY - e.clientY) / this.scale;
+              this.centerColumn += (this.dragX - e.clientX) / this.scale;
+              this.dragX = e.clientX;
+              this.dragY = e.clientY;
+            };
+          },
+          saveProgram() {
+            const r = CyberCook.verifyProgram(this.editorContent);
+            if (r.result) {
+              this.programs.push({name: this.editorName, learned: false, indexInBackup: null, content: this.editorContent});
+            } else {
+              alert(r.msg);
+            }
+          },
+          runProgram(program) {
+            this.programExecutions.push(program.indexInBackup);
+            let {vm, finished, win, msg, log} = CyberCook.step(this.vm, program.content);
+            this.historyVm = this.vm;
+            this.vm = vm;
+            this.centerRow = vm.info().posRow;
+            this.centerColumn = vm.info().posColumn;
+            this.history = log;
+            this.historyIndex = null;
+            if (!finished) {
+              alert(msg);
+            }
+            if (win) {
+              console.log('你赢了，正在获取 flag……');
+              console.log([...this.programsBackup]);
+              console.log([...this.programExecutions]);
+              axios.post('/verify', {
+                token,
+                level: this.level,
+                seed: CyberCook.genRandomState(this.level, this.programsBackup.map(i => i.content)).nhash,
+                programs: this.programsBackup.map(i => i.content),
+                executions: this.programExecutions,
+              }).then(r => {
+                console.log(r);
+                alert(r.data.message);
+              }).catch(e => {
+                console.log(e);
+                alert('error');
+              });
+            }
+          },
+          nextDay() {
+            if (this.programs.length <= CyberCook.maxProgram) {
+              const vm = CyberCook.nextDay(this.level, this.programs.map(i => i.content));
+              this.day++;
+              this.programs = this.programs.map((item, index) => ({...item, learned: true, indexInBackup: index}));
+              this.programsBackup = [...this.programs];
+              this.programExecutions = [];
+              this.historyVm = null;
+              this.vm = vm;
+              this.centerRow = vm.info().posRow;
+              this.centerColumn = vm.info().posColumn;
+              this.history = [];
+              this.historyIndex = null;
+            } else {
+              alert('程序数量超过上限，无法进入下一天');
+            }
+          },
+        },
+      });
+
+      // 以下接口可以用于在 console 上用程序控制一些操作
+
+      // 获取最新状态
+      function debugGetState() {
+        return app.vm.info();
+      }
+
+      // 获取程序列表
+      function debugGetPrograms() {
+        return app.programs;
+      }
+
+      // 保存程序
+      function debugSaveProgram(name, content) {
+        const r = CyberCook.verifyProgram(content);
+        if (r.result) {
+          app.programs.push({name, learned: false, indexInBackup: null, content});
+        } else {
+          alert(r.msg);
+        }
+      }
+
+      // 删除程序
+      function debugDeleteProgram(name) {
+        const oldPrograms = app.programs;
+        const newPrograms = [];
+        for (let i = 0; i < oldPrograms.length; i++) {
+          if (oldPrograms[i].name !== name) {
+            newPrograms.push(oldPrograms[i]);
+          }
+        }
+        app.programs = newPrograms;
+      }
+
+      // 执行程序
+      function debugRunProgram(program) {
+        app.runProgram(program);
+      }
+
+      // 下一天
+      function debugNextDay() {
+        app.nextDay();
+      }
+
+    </script>
+  </body>
+</html>
