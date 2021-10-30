@@ -24,7 +24,7 @@
 
 ## 题解
 
-题目是一块区域被打了码的二维码。显然，被马赛克遮住的区域信息没有完全丢失，如果某个马赛克块叫黑，被遮住的区域就可能有更多黑色。
+题目是一块区域被打了码的二维码。显然，被马赛克遮住的区域信息没有完全丢失，如果某个马赛克块较黑，被遮住的区域就可能有更多黑色。
 
 下载源代码，发现马赛克格子宽度是 23，二维码格子宽度是 11。每个马赛克格子正好一定会影响 3\*3 的二维码格子。
 
@@ -158,7 +158,5 @@ while True:
 
 solved_im = Image.fromarray(ar)
 solved_im.save('solved.bmp')
-solved_im = Image.fromarray(solved)
-solved_im.save('solved_mini.bmp')
 print('CertainRate:', flags.sum() / flags.size)
 ```
