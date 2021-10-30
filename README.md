@@ -56,6 +56,7 @@
 | write-up | 备注 | 包含题目 |
 | - | - | - |
 | [mcfx](players/mcfx/writeup.md) | 总排名第一名 | 全部题目 |
+| [TonyCrane](https://blog.tonycrane.cc/p/c05d7b7c.html) | 总排名第二十二名 | 签到、十六进制、电波、猫咪问答、卖瓜、透明文件、旅行照片、大砍刀、图之上、赛博厨房-0/1、助记词-1、p😭q、Amnesia-1、RSA、LUKS、MicroWorld、阵列恢复、马赛克、minecRaft、密码生成器 |
 
 ## 其他资源
 
