@@ -2,6 +2,14 @@
 
 花絮也欢迎 Pull Request！（个人信息请打码）
 
+## flag
+
+本次比赛一共有 23524 次 flag 提交，第一个提交的 flag 看起来是有备而来，最后一个 flag 也宣告了比赛的落幕。
+
+![](files/13.jpg)
+
+![](files/14.jpg)
+
 ## 梗图
 
 ![](files/1.jpg)
