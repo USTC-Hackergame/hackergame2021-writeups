@@ -38,7 +38,7 @@
 
 ​PS: 存在一个 [befunge 解释器](http://qiao.github.io/javascript-playground/visual-befunge93-interpreter/)。如果你只是在二维完成这个题目的话，这个或许可以帮助你调试，你只需要魔改一下 js 代码即可。
 
-​PPS: 不愿透漏姓名的[验题人](https://github.com/Cirn09)在验题时所改编使用的可视化半调试微型在线集成开发环境[visual-befun3d-interpreter](https://cirn09.github.io/visual-befun3d-interpreter/)。
+​PPS: 不愿透漏姓名的[验题人](https://github.com/Cirn09)在验题时所改编使用的可视化半调试微型在线集成开发环境 [visual-befun3d-interpreter](https://cirn09.github.io/visual-befun3d-interpreter/)。
 
 ### EXP
 
