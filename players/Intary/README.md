@@ -20,11 +20,11 @@
 
 1. 2017 年，中科大信息安全俱乐部（SEC@USTC）并入中科大 Linux 用户协会（USTCLUG）。目前，信息安全俱乐部的域名（sec.ustc.edu.cn）已经无法访问，但你能找到信息安全俱乐部的社团章程在哪一天的会员代表大会上通过的吗？
 
-由于题中给出了原域名，第一时间想到了互联网时光机一类的东西，到Wayback machine查找域名`sec.ustc.edu.cn`,最后到这个页面(https://web.archive.org/web/20181004003308/http://sec.ustc.edu.cn/doku.php/codes)可以找到“本章程在 2015 年 5 月 4 日，经会员代表大会审议通过。”。
+由于题中给出了原域名，第一时间想到了互联网时光机一类的东西，到Wayback machine查找域名`sec.ustc.edu.cn`,最后到这个页面(https://web.archive.org/web/20181004003308/http://sec.ustc.edu.cn/doku.php/codes/)可以找到“本章程在 2015 年 5 月 4 日，经会员代表大会审议通过。”。
 
 2. 中国科学技术大学 Linux 用户协会在近五年多少次被评为校五星级社团？
 
-就硬翻wiki页`https://lug.ustc.edu.cn/wiki/intro/`，可以找到
+就硬翻wiki页(https://lug.ustc.edu.cn/wiki/intro/)，可以找到
 
 ![](assets/img1.jpg)
 
@@ -44,11 +44,11 @@
 
 4. 在 SIGBOVIK 2021 的一篇关于二进制 Newcomb-Benford 定律的论文中，作者一共展示了多少个数据集对其理论结果进行验证？
 
-百度直接搜索SIGBOVIK无果，于是直接选择了谷歌搜索找到`http://sigbovik.org/2021/proceedings.pdf`，之后ctrl+f搜索`Newcomb-Benford`找到论文位置，共13张数据集相关图，答案为13。
+百度直接搜索SIGBOVIK无果，于是直接选择了谷歌搜索找到(http://sigbovik.org/2021/proceedings.pdf/)，之后ctrl+f搜索`Newcomb-Benford`找到论文位置，共13张数据集相关图，答案为13。
 
 5. 不严格遵循协议规范的操作着实令人生厌，好在 IETF 于 2021 年成立了 Protocol Police 以监督并惩戒所有违背 RFC 文档的行为个体。假如你发现了某位同学可能违反了协议规范，根据 Protocol Police 相关文档中规定的举报方法，你应该将你的举报信发往何处？
 
-已经不再相信百度了，直接去谷歌搜索`Protocol Police`，找到（https://www.rfc-editor.org/rfc/rfc8962.html）
+已经不再相信百度了，直接去谷歌搜索`Protocol Police`，找到(https://www.rfc-editor.org/rfc/rfc8962.html/)
 
 在第六节中写到`Send all your reports of possible violations and all tips about wrongdoing to /dev/null. The Protocol Police are listening and will take care of it.`
 
@@ -82,7 +82,7 @@
 
 得知GraphQL接口位置，看到userid：2猜想admin账户可能是id为1的账户
 
-去谷歌搜索GraphQL，找到Github对于GraphQL的介绍，在(https://docs.github.com/cn/graphql/guides/using-the-explorer)这个页面中得知可以使用GraphiQL浏览器扩展
+去谷歌搜索GraphQL，找到Github对于GraphQL的介绍，在(https://docs.github.com/cn/graphql/guides/using-the-explorer/)这个页面中得知可以使用GraphiQL浏览器扩展
 
 在Chrome上安装扩展后进入扩展页面输入API地址`http://202.38.93.111:15001/graphql`，并依照左边默认提供的格式说明、网页中得到的信息再加上一点点直觉一路tab即可
 
@@ -94,7 +94,7 @@
 
 ## 补充
 
-其余还做出来了旅行照片以及FLAG助力大红包，不过手法完全没有参考价值，故不作题解
+其余还做出来了旅行照片、FLAG助力大红包和赛博厨房前两问，不过手法完全没有参考价值，故不作题解
 
 晚上十点半到家冲题冲到一两点，早上五点半离家去上学，在学校老师差点以为我要挂了（（
 
