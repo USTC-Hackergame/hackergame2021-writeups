@@ -70,6 +70,7 @@
 | [poscat](players/poscat) | | p😭q, Easy RSA, 去吧！追寻自由的电波
 | [rvfg](players/rvfg/) | 总排名第 23 名 | Amnesia/记忆清除 |
 | [Kotoki1337](players/Kotoki1337/) | 总排名 #259 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，图之上的信息 |
+| [Ben "Pig" Chu](https://benpigchu.github.io/pikanote/article/ustc-hackergame-2021-writeup.html) | 总排名第 15 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、透明的文件、Amnesia - 轻度失忆、旅行照片、卖瓜、图之上的信息、Amnesia - 记忆清除、FLAG 助力大红包、赛博厨房 - Level 0、赛博厨房 - Level 1、Easy RSA、马赛克、加密的 U 盘、minecRaft、Micro World、p😭q、JUST BE FUN、助记词 - 第一顿大餐、超 OI 的 Writeup 模拟器 - 果然还是逆向比较简单、阵列恢复大师 - RAID 0、阵列恢复大师 - RAID 5、卷王与野生的 GPA |
 | [4qwerty7](players/4qwerty7/writeup.md) | 总排名第 2 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia第一问、轻度失忆、记忆清除、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房、灯，等灯等灯第一问、只读文件系统、一石二鸟、Micro World、卷王与野生的 GPA、阵列恢复大师、链上预言家、助记词、Co-Program、马赛克、minecRaft、密码生成器、外星人的音游掌机、JUST BE FUN、fzuu、p😭q、超 OI 的 Writeup 模拟器前两问 |
 
 ## 其他资源
