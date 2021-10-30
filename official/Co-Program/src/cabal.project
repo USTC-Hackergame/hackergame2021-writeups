@@ -1,0 +1,3 @@
+with-compiler: ghc-9.0.1
+packages: ./*.cabal ./bin/language-sygus/*.cabal
+

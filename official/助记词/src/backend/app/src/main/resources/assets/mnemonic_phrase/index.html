@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<title>Mnemonic Phrases</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3/dist/css/uikit.min.css">
+<style>
+  @media (min-width: 768px) {
+    body {
+      margin: auto;
+      width: 768px;
+      padding: 16px;
+      text-align: justify;
+      word-break: keep-all;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      margin: 0;
+      padding: 16px;
+      text-align: justify;
+      word-break: keep-all;
+    }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3/dist/js/uikit-icons.min.js"></script>
+<script>
+  const token = new URLSearchParams(location.search).get('token') || localStorage.getItem('token') || ''
+
+  let phraseInput = '', mnemonics = new Set(), isPhraseInputValid = true
+
+  window.onload = () => {
+    fetch('mnemonics.txt').then(r => r.text()).then(o => o.trim().split('\n').forEach(m => mnemonics.add(m)))
+    history.replaceState({}, '', location.pathname)
+    localStorage.setItem('token', token)
+    getPhrases(document.body)
+  }
+
+  function onPhraseRandom(elem) {
+    const words = []
+    for (let i = 0; i < 4; ++i) {
+      let iterator = mnemonics.values(), next = null
+      for (let random = Math.random() * mnemonics.size; random >= 0; --random) {
+        next = iterator.next()
+      }
+      words.push(next.value)
+    }
+    elem.previousElementSibling.value = words.join(' ')
+    onPhraseInputChange(elem.previousElementSibling)
+  }
+
+  function onPhraseAdd(elem) {
+    if (isPhraseInputValid && phraseInput.length > 0) {
+      postPhrases(elem).then(() => getPhrases(document.body))
+    }
+  }
+
+  function onPhraseClear(elem) {
+    deletePhrases(elem).then(() => getPhrases(document.body))
+  }
+
+  function onPhraseInputChange(elem) {
+    isPhraseInputValid = true
+    phraseInput = elem.value.toLocaleLowerCase('en-US')
+    if (phraseInput.length > 0) {
+      const parts = phraseInput.split(' ')
+      if (parts.length !== 4 || !parts.every(part => mnemonics.has(part))) {
+        isPhraseInputValid = false
+      }
+    }
+    elem.nextElementSibling.nextElementSibling.disabled = !(isPhraseInputValid && phraseInput.length > 0)
+    isPhraseInputValid ? elem.classList.remove('uk-form-danger') : elem.classList.add('uk-form-danger')
+  }
+
+  function generateText(obj) {
+    if (obj['flag2']) {
+      return `Modified ${obj['modified']} phrase(s) (flag 1: ${obj['flag1']}, flag 2: ${obj['flag2']}).`
+    }
+    if (obj['flag1']) {
+      return `Modified ${obj['modified']} phrase(s) (flag 1: ${obj['flag1']}).`
+    }
+    return `Modified ${obj['modified']} phrase(s).`
+  }
+
+  function getPhrases(elem) {
+    const phraseUrl = 'phrases?' + new URLSearchParams([ [ 'token', token ] ]).toString()
+
+    return fetch(phraseUrl).then(r => r.json()).then(o => {
+      const old = elem.querySelector('dl'), next = document.createElement('dl')
+
+      next.classList.add('uk-description-list', 'uk-description-list-divider')
+
+      for (let phrase of o) {
+        const time = phrase['time'], text = phrase['phrase']
+
+        const span = document.createElement('span')
+        const dt = document.createElement('dt')
+        const dd = document.createElement('dd')
+
+        span.classList.add('uk-text-lead', 'uk-text-uppercase')
+        dd.innerText = `Created at ${time}`
+        span.innerText = text
+
+        dt.appendChild(span)
+        next.appendChild(dt)
+        next.appendChild(dd)
+      }
+      old.parentElement.replaceChild(next, old)
+    })
+  }
+
+  function postPhrases(elem) {
+    const phraseUrl = 'phrases?' + new URLSearchParams([ [ 'token', token ] ]).toString()
+
+    return fetch(phraseUrl, { method: 'POST', body: JSON.stringify([ phraseInput ]) }).then(r => r.json()).then(o => {
+      const alert = document.createElement('div')
+      const close = document.createElement('a')
+      const text = document.createElement('p')
+
+      alert.setAttribute('uk-alert', 'uk-alert')
+      close.setAttribute('uk-close', 'uk-close')
+      alert.classList.add('uk-alert-success')
+      close.classList.add('uk-alert-close')
+      text.innerText = generateText(o)
+      alert.appendChild(close)
+      alert.appendChild(text)
+
+      elem.parentElement.querySelectorAll('div[uk-alert]').forEach(e => e.remove())
+      elem.parentElement.appendChild(alert)
+    })
+  }
+
+  function deletePhrases(elem) {
+    const phraseUrl = 'phrases?' + new URLSearchParams([ [ 'token', token ] ]).toString()
+
+    return fetch(phraseUrl, { method: 'DELETE' }).then(r => r.json()).then(o => {
+      const alert = document.createElement('div')
+      const close = document.createElement('a')
+      const text = document.createElement('p')
+
+      alert.setAttribute('uk-alert', 'uk-alert')
+      close.setAttribute('uk-close', 'uk-close')
+      alert.classList.add('uk-alert-success')
+      close.classList.add('uk-alert-close')
+      text.innerText = generateText(o)
+      alert.appendChild(close)
+      alert.appendChild(text)
+
+      elem.parentElement.querySelectorAll('div[uk-alert]').forEach(e => e.remove())
+      elem.parentElement.appendChild(alert)
+    })
+  }
+</script>
+</head>
+<body>
+<header>
+  <h1 class="uk-text-nowrap">Mnemonic Phrases</h1>
+  <p class="uk-text-default">A mnemonic phrase is composed of four specific English words which are separated by spaces.</p>
+  <p class="uk-text-default">The words in mnemonic phrases are case-insensitive.</p>
+</header>
+<main>
+  <a class="uk-button uk-button-default" href="mnemonic-phrase-source.zip">SOURCE</a>
+  <a class="uk-button uk-button-default" href="mnemonics.txt">MNEMONICS</a>
+  <hr class="uk-divider-icon">
+  <dl class="uk-description-list uk-description-list-divider"></dl>
+  <input class="uk-input uk-width-medium uk-form-medium" type="text" placeholder="New Phrase" oninput="onPhraseInputChange(this)">
+  <button class="uk-button uk-button-default" onclick="onPhraseRandom(this)"><span class="uk-text-default">RANDOM</span></button>
+  <button class="uk-button uk-button-default" onclick="onPhraseAdd(this)" disabled><span class="uk-text-default">ADD</span></button>
+  <button class="uk-button uk-button-default" onclick="onPhraseClear(this)"><span class="uk-text-danger">CLEAR ALL</span></button>
+</main>
+</body>
+</html>

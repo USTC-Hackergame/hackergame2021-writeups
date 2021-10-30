@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}个人发布内容{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        你发布的内容
+    </div>
+    <ul class="list-group list-group-flush">
+        {% for content in contents %}
+        <li class="list-group-item">{% if not content.public %}【私密】{% endif %}{{ content.contents }}【由您于 {{ content.date|date:'Y-m-d H:i' }} 发布】</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

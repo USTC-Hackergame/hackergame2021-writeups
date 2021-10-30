@@ -1,0 +1,45 @@
+<html lang="zh-CN">
+    <head>
+        <title>宇宙无敌大砍刀</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta title="大砍刀">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE=" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-8 mx-auto mt-2 justify-content-center container">
+                    {% if succ_msg %}
+                    <div class="alert alert-success row" role="alert">
+                        {{succ_msg}}
+                    </div>
+                    {% endif %}
+                    {%if fail_msg %}
+                    <div class="alert alert-warning row" role="alert">
+                        {{fail_msg}}
+                    </div>
+                    {%endif%}
+
+                    <div class=row>
+                        <form class="form-inline" method="POST">
+                            <input type="hidden" name="ip" id="ip">
+                            <button type="submit" class="btn btn-danger ml-2">点击按钮，为您的好友助力</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+        <script type="text/javascript">
+            document.getElementById("ip").value=returnCitySN["cip"]
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha256-7dA7lq5P94hkBsWdff7qobYkp9ope/L5LQy2t/ljPLo=" crossorigin="anonymous"></script>
+    </body>
+</html>

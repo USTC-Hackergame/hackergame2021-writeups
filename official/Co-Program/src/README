@@ -1,0 +1,25 @@
+I know... These codezz are awfully written... :-(
+
+
+But, in case you want to try:
+
+Prerequisites:
+1. GHC 9.0 (you can use ghcup from https://www.haskell.org/ghcup/)
+2. Z3 or CVC5 binaries
+
+
+Usage:
+    cabal build                   # Build the project
+    cabal run server 1            # Launch Co-Login challenges
+    cabal run server 2            # Launch Co-UnitTest challenges
+    TOKEN=... cabal run solver1   # Auto solve Co-Login
+    TOKEN=... cabal run solver2   # Auto solve Co-UnitTest
+
+
+Notes: You may need to change some code before they can run on your machine.
+1. Solver1.hs
+   (main) IP address; port; sending token is not necessary if you try locally
+   (solveConstants) Path to "cvc5", or "z3"
+2. Solver2.hs
+   (main) IP address; port; sending token is not necessary if you try locally
+   (solveOne) Path to "cvc5"; path "/tmp/synth.sygus"

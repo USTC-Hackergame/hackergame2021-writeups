@@ -1,0 +1,14 @@
+Weapons
+a - a blessed +2 bullwhip (weapon in hand)
+Armor
+b - an uncursed +0 leather jacket (being worn)
+c - a blessed +0 fedora (being worn)
+Comestibles
+d - 4 uncursed food rations
+Tools
+e - a +0 pick-axe (alternate weapon; not wielded)
+f - a tinning kit (0:76)
+h - an uncursed sack
+i - an uncursed oil lamp
+Gems
+g - an uncursed touchstone

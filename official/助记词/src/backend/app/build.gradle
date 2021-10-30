@@ -1,0 +1,34 @@
+plugins {
+    id 'application'
+    id 'de.jjohannes.extra-java-module-info' version '0.9'
+}
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    archivesBaseName = 'mnemonic-phrase'
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    implementation 'org.json:json:20200518'
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.69'
+}
+
+extraJavaModuleInfo {
+    automaticModule 'nanohttpd-2.3.1.jar', 'nanohttpd'
+}
+
+task projectZip(type: Zip) {
+    from project.rootDir
+    archiveName 'mnemonic-phrase-source.zip'
+    include 'gradle/**', 'settings.gradle', 'gradlew*', 'app/src/**', 'app/build.gradle'
+}
+
+application {
+    applicationDefaultJvmArgs = ['-XX:+UseZGC', '-Xlog:gc', '-Xmx6G']
+    mainClass = 'cn.edu.ustc.lug.hack.mnemonic_phrase.Instance'
+}

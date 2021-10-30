@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}主页{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        公开展板
+    </div>
+    <ul class="list-group list-group-flush">
+        {% for content in contents %}
+            <li class="list-group-item">{{ content.contents }}【由用户 <a href="/profile/{{ content.user.id }}">{{ content.user }}</a> 于 {{ content.date|date:'Y-m-d H:i' }} 发布】</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

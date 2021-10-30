@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}用户公开信息{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>用户公开信息</h1>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <p>（头像功能还没做）</p>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">用户 {{ profile_user.username }}</h5>
+                    <p class="card-text">联系方式: {{ profile_user.email }}</p>
+                    <p class="card-text"><small class="text-muted">于 {{ profile_user.date_joined|date:'Y-m-d H:i' }} 注册</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %} - 展板</title>
+        <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">展板</a>
+                {% if user.is_authenticated %}
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">我的</a>
+                    </li>
+                </ul>
+                {% endif %}
+                <div class="d-flex">
+                    <ul class="navbar-nav">
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <form action="/logout" method="POST">
+                                {% csrf_token %}
+                                <button class="btn btn-danger" type="submit">登出</button>
+                            </form>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                          <a class="nav-link" href="/register">注册</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/login">登录</a>
+                        </li>
+                        {% endif %}
+                      </ul>
+                </div>
+            </div>
+        </nav>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

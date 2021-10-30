@@ -1,0 +1,7 @@
+flask==2.0.1
+graphene==3.0b7
+graphql-server==3.0.0b4
+graphql-core==3.1.6
+flask-sqlalchemy==2.5.1
+flask-login==0.5.0
+pyopenssl==21.0.0

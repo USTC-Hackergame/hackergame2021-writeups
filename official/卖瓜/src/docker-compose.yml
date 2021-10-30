@@ -1,0 +1,20 @@
+version: '2'
+services:
+  php:
+    build:
+      context: ./src/services/php
+      dockerfile: Dockerfile
+    volumes:
+      - ./src/app:/mnt/app:ro
+    restart: always
+  web:
+    image: nginx:1.21.3
+    ports:
+      - "15003:80"
+    depends_on:
+      - php
+    volumes_from:
+      - php
+    volumes:
+      - ./src/images/nginx/config:/etc/nginx/conf.d:ro
+    restart: always

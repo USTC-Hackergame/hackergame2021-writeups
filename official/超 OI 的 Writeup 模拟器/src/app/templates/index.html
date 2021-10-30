@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="static/favicon.ico" />
+    <title>超 OI 的 Writeup 模拟器</title>
+
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/font-awesome.min.css">
+
+    <script>window.console = window.console || function (t) { };</script>
+    <script>if (document.location.search.match(/type=embed/gi)) { window.parent.postMessage("resize", "*"); }</script>
+    <script>window.history.replaceState({}, "超 OI 的 Writeup 模拟器", '/');</script>
+</head>
+
+<body translate="no">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> <a class="navbar-brand" href="#">超 OI 的 Writeup 模拟器</a>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="navbar-nav ml-md-auto">
+                            <a href="logout" class="btn btn-danger my-2 my-sm-0">
+                                溜了溜了
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped  progress-bar-animated bg-success" role="progressbar"
+                        style="width: {{ width }}%" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                {% if result == 'True' %}
+                <div class="alert alert-success" role="alert">
+                    答案正确!
+                </div>
+                {% endif %}
+                {% if result == 'False' %}
+                <div class="alert alert-danger" role="alert">
+                    答案错误 /(ㄒoㄒ)/~~
+                </div>
+                {% endif %}
+                {% if result == 'Rate' %}
+                <div class="alert alert-warning" role="alert">
+                    两次提交请间隔 5 秒
+                </div>
+                {% endif %}
+                <div class="row" style="margin-top:5px">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4 alert alert-info text-center">
+                        <p class="lead" style="margin-bottom:5px">继续逆向</p>
+                        <h1 class="cover-heading"> {{ remaining }} 题</h1>
+                        <p class="lead" style="margin-bottom:5px">即可拿到下一个 Flag</p>
+                        {% if flag0 %}
+                        <h6>{{ flag0 }}</h6>
+                        {% endif %}
+                        {% if flag1 %}
+                        <h6>{{ flag1 }}</h6>
+                        {% endif %}
+                        {% if flag2 %}
+                        <h6>{{ flag2 }}</h6>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                {% if width != 100 %}
+                <center>
+                    <a href="challenge/{{ level }}.bin" class="btn btn-info my-2 my-sm-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-download" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                        </svg>
+                        下载本题附件
+                    </a>
+                </center>
+                <div class="row" style="margin-top:10px">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <form action="/submit" method="POST">
+                            <div class="input-group">
+                                <input type="text" placeholder="请输入本题密码" class="form-control" name="ans">
+                                <div class="pull-right" style="margin-left:5px">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">提交</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

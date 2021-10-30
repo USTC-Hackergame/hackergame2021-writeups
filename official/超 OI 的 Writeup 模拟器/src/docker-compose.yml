@@ -1,0 +1,20 @@
+version: "2.4"
+services:
+  rerere:
+    restart: always
+    build: .
+    ports:
+      - "13768:80"
+    mem_limit: 1024M
+  redis:
+    image: redis
+    command: ["redis-server", "--appendonly", "yes"]
+    restart: always
+    expose:
+      - "6379"
+    mem_limit: 2048M
+    volumes:
+      - rerere-redis-data:/data
+
+volumes:
+  rerere-redis-data:

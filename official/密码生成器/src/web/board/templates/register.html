@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}注册{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>注册</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="username" class="form-label">用户名</label>
+            <input type="text" class="form-control" id="username">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">密码</label>
+            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
+            <div id="passwordHelp" class="form-text">为了提高密码安全系数，所有用户的密码必须为 16 位，并且必须至少包含一个数字、一个小写字母、一个大写字母和一个特殊符号。推荐使用<a href="{% static 'generator.exe' %}">密码生成器</a>一键生成密码。</div>
+        </div>
+        <button type="submit" class="btn btn-primary">注册</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>登录以查看笔记……</h1>
+<form method="POST">
+    <div class="mb-3">
+        <label for="username" class="form-label">用户名</label>
+        <input type="text" class="form-control" id="username" name="username">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">密码</label>
+        <input type="password" class="form-control" id="password" name="password">
+        <div id="emailHelp" class="form-text">测试账号：用户名 guest，密码 guest</div>
+    </div>
+    <button type="submit" class="btn btn-primary">登录</button>
+</form>
+{% endblock %}

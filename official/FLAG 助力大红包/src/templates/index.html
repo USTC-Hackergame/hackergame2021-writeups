@@ -1,0 +1,93 @@
+<html lang="zh-CN">
+    <head>
+        <title>宇宙无敌大砍刀</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta title="大砍刀">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE=" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-8 mx-auto justify-content-center container">
+                    <h1 class="row">大砍刀</h1>
+                    {%if fail_msg %}
+                    <div class="alert alert-warning row" role="alert">
+                        {{fail_msg}}
+                    </div>
+                    {%endif%}
+                    <p class="row" style=color:red>参与活动，助力抽奖！集满 {{total_money}} 个 flag，即可提取 1 个 flag。<span class="text-danger"><a href="/help">活动规则</a></span></p>
+                    {% if is_login == False %}
+                    <div class=row>
+                        <form class="form-inline" action="/api/login" method="POST">
+                            <div class="form-group">
+                              <label for="token">Token:</label>
+                              <input type="text" name=token class="form-control ml-2" id="token">
+                            </div>
+                            <button type="submit" class="btn btn-danger ml-2">登录即可获得 flag</button>
+                          </form>
+                    </div>
+                    {% else %}
+                    <div class=row>
+                        <p>恭喜你积攒到</p>
+                    </div>
+                    <div class=row>
+                        <h4 class="mx-auto text-danger"> {{current_money}} 个 flag， <button onclick="window.location.href='/checkout'" class="btn btn-danger">立即提现</button>
+                    </div>
+                    <div class=row>
+                        <p>剩余时间：<span id="timer"></span></p>
+                    </div>
+                    <div class=row>
+                        <p>已有 {{help_count}} 位好友为您助力。</p>
+                    </div>
+                    <div class=row>
+                        <p>将如下链接分享给好友，可以获得好友助力，获得更多 flag ：<a href="{{helplink}}">{{helplink}}</a>
+                        </p>
+                    </div>
+                    <div class=row>
+                        <p>退出活动，放弃 flag ：<button onclick="logout();" class="btn btn-warning">退出活动</button>
+                    </div>
+
+                    <script type="text/javascript"> 
+                        var endtime = {{start_time}} + {{total_time}};
+
+                        function CountDown() {
+                            var currtime = parseInt(Date.parse(new Date()) / 1000);
+                            var diffsec = endtime - currtime;
+
+                            if (diffsec > 0) {
+                                minutes = Math.floor(diffsec / 60);
+                                seconds = Math.floor(diffsec % 60);
+                                msg = minutes + "分" + seconds + "秒";
+                                document.getElementById("timer").innerHTML = msg;
+                            } else {
+                                document.getElementById("timer").innerHTML = "0分0秒";
+                                clearInterval(timer);
+                            }
+                        }
+                        timer = setInterval("CountDown()", 1000); 
+                        
+                        function logout() {
+                            alert("退出活动，将放弃 flag ，确定吗？");
+                            alert("flag 已经唾手可得了，真的要放弃活动吗？");
+                            alert("壮士请留步，要不再考虑一下?");
+                            window.location.href="/logout";
+
+                        }
+                    </script>
+                    {% endif %}
+                    <div class="row text-light" style="margin-top: 200px;">
+                        <p>* 参与本活动即视为同意本活动规则，具体请参阅活动规则</p>
+                        <p>** 本活动一切<strong>解释权、裁定权、狗头权</strong>归【大砍刀】平台所有。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha256-7dA7lq5P94hkBsWdff7qobYkp9ope/L5LQy2t/ljPLo=" crossorigin="anonymous"></script>
+    </body>
+</html>

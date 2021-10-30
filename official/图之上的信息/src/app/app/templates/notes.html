@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>你的笔记</h1>
+<h6>用户名: {{ current_user.username }}</h6>
+<h6>邮箱: {{ current_user.email }}。邮箱信息不会被公开。</h6>
+<form action='/logout' method="POST">
+    <button type="submit" class="btn btn-danger">退出</button>
+</form>
+
+<div id="card" class="card mt-3">
+    <div class="card-body" id="info">
+        读取中……
+    </div>
+</div>
+
+<script type="text/javascript" src="/static/axios.min.js"></script>
+<script>
+    (function () {
+        function createCardBody() {
+            let node = document.createElement("div");
+            node.classList.add("card-body");
+            return node;
+        }
+        let info_ele = document.querySelector("#info");
+        let card_ele = document.querySelector("#card");
+        axios.post("/graphql", {
+            query: "{ notes(userId: {{ current_user.id }}) { id\ncontents }}"
+        }).then(function (response) {
+            let data = response.data;
+            if (data.error) {
+                info_ele.innerHTML = error[0].message;
+                console.error(data.error);
+            } else {
+                let notes = response.data.data.notes;
+                card_ele.innerHTML = "";
+                for (let i = 0; i < notes.length; i++) {
+                    let node = createCardBody();
+                    node.innerHTML = notes[i].contents;
+                    card_ele.appendChild(node);
+                }
+            }
+        }).catch(function (error) {
+            info_ele.innerHTML = error.message;
+            console.error(error);
+        })
+    })();
+</script>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="static/bootstrap.min.css">
+        <link rel="stylesheet" href="static/error.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <title>Token 错误</title>
+    </head>
+    <body>
+        <form class="form-token" action="">
+            <h1>Error: Token 错误</h1>
+
+                <p>Token 错误，题目没有加载，推荐使用比赛平台上的题目链接访问。</p>
+                <p>或在以下输入框中粘贴你的完整 token（可以从比赛平台复制）:</p>
+
+            <input type="text" style="width: 400px;" name="token" placeholder="">
+            <input type="submit" value="开始做题" />
+        </form>
+        <script src="static/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('input[type="text"]').on('input', function () {
+                    this.value = $.trim(this.value);
+                });
+            });
+        </script>
+</body>
+</html>

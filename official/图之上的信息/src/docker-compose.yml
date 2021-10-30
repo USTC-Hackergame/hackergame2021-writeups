@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  graphleak:
+    restart: always
+    build: .
+    ports:
+      - "15001:80"
+    mem_limit: 1024M
+    memswap_limit: 1024M
