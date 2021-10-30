@@ -80,6 +80,7 @@
 | [monad](players/monad/) | 总排名第 14 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、透明的文件、旅行照片、FLAG 助力大红包、Amnesia-轻度失忆、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房(Lv0-2)、Micro World、助记词、密码生成器、p😭q、（还在更新中） |
 | [Sora](https://www.sorasky.in/hg2021.sorasky) | 总排名第 102 名 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，Amnesia 轻度失忆，图之上的信息，加密的U盘，Micro World，马赛克 |
 | [ThinkingNull](https://awsl.blog/2021/ustc-hack-2021) | | 猫咪问答 Pro Max、旅行照片 |
+| [風的影子](players/windshadow/) | 总排名第 32 | 签到题、去吧！追寻自由的电波、猫咪问答、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、图之上的信息、Easy RSA、加密的 U 盘、Micro World、马赛克、minecRaft、p😭q|
 
 ## 其他资源
 
