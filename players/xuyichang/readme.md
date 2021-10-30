@@ -1,7 +1,6 @@
 # Hackergame2021 writeup by Kobe972
 ## 签到
-在界面点Next或Prevoius，可以看到浏览器URL多了查询参数?page=xxx，其中xxx为点击Next的次数。直接改变浏览器中的查询参数，当
-调到1635000000时正好显示比赛时间。  
+在界面点Next或Prevoius，可以看到浏览器URL多了查询参数?page=xxx，其中xxx为点击Next的次数。直接改变浏览器中的查询参数，当调到1635000000时正好显示比赛时间。  
 ![](img/flag日记.PNG)
 ## 进制十六——参上
 打开题目，发现有如下所示的图片：
