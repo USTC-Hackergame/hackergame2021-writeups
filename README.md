@@ -76,6 +76,8 @@
 | [zhixi](https://zhangjk98.xyz/hackergame-2021-write-up/) | 总排名第 187 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、旅行照片、Amnesia{轻度失忆}、图之上的信息、赛博厨房前两问、p😭q |
 | [zxx](players/zxx/README.md) | 总排名第 307 名 | 进制十六 -- 参上, 去吧！追寻自由的电波，FLAG 助力大红包，minecRaft |
 | [yyuueexxiinngg](players/yyuueexxiinngg/README.md) | 总排名第 152 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia{轻度失忆}、图之上的信息、赛博厨房(Level 0、Level 1)、minecRaft  |
+| [Crabtux](players/Crabtux/) | 总排名第 91 名 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，Amnesia（轻度失忆），图之上的信息，Easy RSA，加密的 U 盘，minecRaft，超 OI 的 WriteUp 模拟器（果然还是逆向比较简单） |
+| [monad](players/monad/) | 总排名第 14 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、透明的文件、旅行照片、FLAG 助力大红包、Amnesia-轻度失忆、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房(Lv0-2)、Micro World、助记词、密码生成器、p😭q、（还在更新中） |
 
 ## 其他资源
 
