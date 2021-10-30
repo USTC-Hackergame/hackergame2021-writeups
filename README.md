@@ -30,7 +30,7 @@
 | [图之上的信息](official/图之上的信息/README.md) | [文件、源代码](official/图之上的信息/src) |
 | [Easy RSA](official/Easy%20RSA/README.md) | [文件、源代码](official/Easy%20RSA/src) |
 | [加密的 U 盘](official/加密的%20U%20盘/README.md) | [文件、源代码](official/加密的%20U%20盘/src) |
-| [赛博厨房](official/赛博厨房/README.md) | [文件、源代码（暂缺）](official/赛博厨房/src) |
+| [赛博厨房](official/赛博厨房/README.md) | [文件、源代码](official/赛博厨房/src) |
 | [灯，等灯等灯](official/灯，等灯等灯/README.md) | [文件、源代码](official/灯，等灯等灯/src) |
 | [只读文件系统](official/只读文件系统/README.md) | [文件、源代码](official/只读文件系统/src) |
 | [一石二鸟](official/一石二鸟/README.md) | [文件、源代码](official/一石二鸟/src) |
