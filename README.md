@@ -67,7 +67,7 @@
 | [Intary](players/Intary/README.md) | 总排名第 242 名 | 签到, 进制十六——参上, 去吧！追寻自由的电波, 猫咪问答 Pro Max, 卖瓜, 透明的文件, 图之上的信息 |
 | [Frankss](players/Frankss/README.md) | 总排名第11名 | 进制十六—参上 超OI的writeup模拟器 |
 | [B1ue1nWh1te](players/B1ue1nWh1te) | 总排名第74名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia(轻度失忆)、图之上的信息、Easy RSA、赛博厨房(Level 0、Level 1)、链上预言家(预言已知)、马赛克、minecRaft |
-| [poscat](players/poscat) | | p😭q, Easy RSA, 去吧！追寻自由的电波
+| [poscat](players/poscat) | | p😭q, Easy RSA, 去吧！追寻自由的电波|
 | [rvfg](players/rvfg/) | 总排名第 23 名 | Amnesia/记忆清除 |
 | [Kotoki1337](players/Kotoki1337/) | 总排名 #259 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，图之上的信息 |
 | [RickAstley](players/RickAstley/) | #21 图一乐 | FLAG 助力大红包 / Easy RSA / 卷王与野生的 GPA / 链上预言家 / p😭q |
@@ -81,6 +81,7 @@
 | [Sora](https://www.sorasky.in/hg2021.sorasky) | 总排名第 102 名 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，Amnesia 轻度失忆，图之上的信息，加密的U盘，Micro World，马赛克 |
 | [ThinkingNull](https://awsl.blog/2021/ustc-hack-2021) | | 猫咪问答 Pro Max、旅行照片 |
 | [風的影子](players/windshadow/) | 总排名第 32 | 签到题、去吧！追寻自由的电波、猫咪问答、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、图之上的信息、Easy RSA、加密的 U 盘、Micro World、马赛克、minecRaft、p😭q|
+| [std::_Rb_tree](players/rbtree) | 总排名第 27 | 透明文件, FLAG 助力大红包, Amnesia, Easy RSA, 助记词, 马赛克, 灯，等灯等灯, Micro World, 阵列恢复带师, minecRaft, p😭q |
 
 ## 其他资源
 
