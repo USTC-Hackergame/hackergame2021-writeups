@@ -41,7 +41,7 @@
 | [助记词](official/助记词/README.md) | [文件、源代码](official/助记词/src) |
 | [Co-Program](official/Co-Program/README.md) | [文件、源代码](official/Co-Program/src) |
 | [马赛克](official/马赛克/README.md) | [文件、源代码](official/马赛克/src) |
-| [minecRaft](official/minecRaft/README.md) | [文件、源代码（暂缺）](official/minecRaft/src) |
+| [minecRaft](official/minecRaft/README.md) | [文件、源代码](official/minecRaft/src) |
 | [密码生成器](official/密码生成器/README.md) | [文件、源代码](official/密码生成器/src) |
 | [外星人的音游掌机](official/外星人的音游掌机/README.md) | [文件、源代码](official/外星人的音游掌机/src) |
 | [JUST BE FUN](official/JUST%20BE%20FUN/README.md) | [文件、源代码](official/JUST%20BE%20FUN/src) |
