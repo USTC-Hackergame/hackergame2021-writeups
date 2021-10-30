@@ -59,6 +59,7 @@
 | [TonyCrane](https://blog.tonycrane.cc/p/c05d7b7c.html) | 总排名第二十二名 | 签到、十六进制、电波、猫咪问答、卖瓜、透明文件、旅行照片、大砍刀、图之上、赛博厨房-0/1、助记词-1、p😭q、Amnesia-1、RSA、LUKS、MicroWorld、阵列恢复、马赛克、minecRaft、密码生成器 |
 | [宝硕](players/renbaoshuo/README.md) | 总排名第 264 名, [博客](https://blog.baoshuo.ren/post/ustc-hackergame-2021-write-up/) | 签到, 进制十六——参上, 去吧！追寻自由的电波, 旅行照片, FLAG 助力大红包, 猫咪问答 Pro Max, 卖瓜, 透明的文件, Amnesia/轻度失忆, 图之上的信息 |
 | [Henry-ZHR](players/Henry-ZHR/) | | 旅行照片，Co-Program |
+| [chuangzhu](https://melty.land/blog/ustclug-hackergame-2021-write-up) | | 签到、猫咪问答 Pro Max、进制十六——参上、去吧！追寻自由的电波、透明的文件、赛博厨房、Level 0、Level 1、FLAG 助力大红包、图之上的信息、卖瓜、加密的 U 盘、旅行照片、阵列恢复大师、p😭q、Amnesia |
 
 ## 其他资源
 
