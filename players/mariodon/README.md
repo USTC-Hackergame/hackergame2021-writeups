@@ -235,7 +235,13 @@ int main()
 
 ```
 
-顺便，之前那位的做法在新版 gcc 也行不通了，因为目前 `const char []` 所在的 `.rodata` 不是可执行了
+顺便，之前那位的做法在新版 gcc 也行不通了，因为目前 `.rodata` 所在的 Segment Section 不再是可执行了
+
+之前 gcc 把 .text 和 .rodata 合并在一起看起来是[优化](https://stackoverflow.com/questions/44938745/rodata-section-loaded-in-executable-page)
+
+![readelf](assets/readelf.png)
+
+![readelf2](assets/readelf2.png)
 
 ## 图之上的信息
 
@@ -455,9 +461,9 @@ RAID 5 特点是把连续数据分散到多个盘储存，有冗余并且有 左
 
 那么第一步，就是将 gif 读取成一个 numpy 数组
 
-这解析 gif 还挺坑的，试了好多库读出来的数据格式都和原来不一样
+没想到这解析 gif 还挺坑的，试了好多库读出来的数据格式都和原来不一样
 
-找了个 librosa 的 example sound 作为调试，完成了解析 gif 的代码
+找了个 librosa 的 example sound 来调试，完成了解析 gif 的代码
 
 ```python
 gif_frames = []
@@ -478,7 +484,6 @@ for image_file in frame_list:
 S = []
 red_pixel_np = np.array(red_pixel)
 white_pixel_np = np.array(white_pixel)
-freq_range = range(num_freqs * 2 + 1)
 
 for frame in gif_frames:
     S_frame = []
