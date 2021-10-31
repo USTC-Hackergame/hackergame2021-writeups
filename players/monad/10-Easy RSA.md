@@ -62,7 +62,7 @@ $$
 
 然而我不会求，查资料，发现了这个：[Finding the k-th root modulo m](https://math.stackexchange.com/questions/2073284/finding-the-kth-root-modulo-m)，简直完美。
 
-按照这篇文章（回答）所说，首先求满足这一式子的 $k$, $v$：
+按照这篇文章（回答）所说，首先求满足这一式子的 $u$, $v$：
 
 $$
 u \, e - v \, \varphi(n) = 1
