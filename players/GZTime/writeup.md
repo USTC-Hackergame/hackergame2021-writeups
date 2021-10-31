@@ -4,7 +4,7 @@
 
 公式在 GitHub 大概率无法显示，建议移步博客阅读。
 
-代码文件见 []
+代码文件见 [scripts](https://github.com/USTC-Hackergame/hackergame2021-writeups/tree/master/players/GZTime/scripts)
 
 ## 签到
 
