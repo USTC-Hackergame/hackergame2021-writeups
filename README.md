@@ -78,7 +78,7 @@
 | [zxx](players/zxx/README.md) | 总排名第 307 名 | 进制十六 -- 参上, 去吧！追寻自由的电波，FLAG 助力大红包，minecRaft |
 | [yyuueexxiinngg](players/yyuueexxiinngg/README.md) | 总排名第 152 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia{轻度失忆}、图之上的信息、赛博厨房(Level 0、Level 1)、minecRaft  |
 | [Crabtux](players/Crabtux/) | 总排名第 91 名 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，Amnesia（轻度失忆），图之上的信息，Easy RSA，加密的 U 盘，minecRaft，超 OI 的 WriteUp 模拟器（果然还是逆向比较简单） |
-| [monad](players/monad/) | 总排名第 14 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、透明的文件、旅行照片、FLAG 助力大红包、Amnesia-轻度失忆、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房(Lv0-2)、Micro World、助记词、密码生成器、p😭q、（还在更新中） |
+| [monad](players/monad/) | 总排名第 14 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia-轻度失忆、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房(Lv0-2)、Micro World、阵列恢复大师（RAID0+5）、助记词、马赛克、minecRaft、密码生成器、JUST BE FUN、p😭q |
 | [Sora](https://www.sorasky.in/hg2021.sorasky) | 总排名第 102 名 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，Amnesia 轻度失忆，图之上的信息，加密的U盘，Micro World，马赛克 |
 | [ThinkingNull](https://awsl.blog/2021/ustc-hack-2021) | | 猫咪问答 Pro Max、旅行照片 |
 | [風的影子](players/windshadow/) | 总排名第 32 | 签到题、去吧！追寻自由的电波、猫咪问答、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、图之上的信息、Easy RSA、加密的 U 盘、Micro World、马赛克、minecRaft、p😭q|
@@ -90,6 +90,10 @@
 | [ranwen](players/ranwen/wp.md) | 总排名第 6 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房（Level 0、Level 1）、灯，等灯等灯（Level 0）、Micro World、卷王与野生的 GPA、阵列恢复大师、链上预言家、助记词、Co-Program（Co-Login）、马赛克、minecRaft、JUST BE FUN、p😭q、超 OI 的 Writeup 模拟器（果然还是逆向比较简单、这次没人两小时手做吧） |
 | [mariodon](players/mariodon/README.md) | 总排名第 40 | 签到题、进制十六——参上、去吧！追寻自由的电波、猫咪问答 ProMax、卖瓜、透明的文件、旅行照片、FLAG助力大红包、Amnesia、图之上的信息、EasyRSA、加密的 U 盘、赛博厨房（Level 0、Level 1）、卷王与野生的 GPA、阵列恢复大师（RAID 0）、p😭q |
 | [harrynull](players/harrynull/README.md) | 总排名第 31, [blog](https://blog.harrynull.tech/post/2021/Hackergame-2021-Writeup) | 卖瓜、透明的文件、FLAG助力大红包、图之上的信息、加密的 U 盘、赛博厨房（Level 0, Level 1, Level 2）、马赛克、minecRaft、JUST BE FUN、p😭q |
+| [鹿目&amp;ensp;圆](players/鹿目&amp;ensp;圆/README.md) | 总排名第 45 名 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，卖瓜，透明的文件，旅行照片，FLAG 助力大红包，Amnesia（轻度失忆），图之上的信息，Easy RSA，赛博厨房（LEVEL 0、LEVEL 1），灯，等灯等灯（LEVEL 0），Micro World，马赛克，密码生成器，JUST BE FUN |
+| [lyq1996](players/lyq1996/README.md) | 总排名第 109, [blog](https://lyq.blogd.club/2021/10/31/hackgame-2021-wp/) | 助力、Amnesia轻度失忆、Amnesia重度失忆、只读文件系统、catchGPA |
+| [lxdlam](players/lxdlam/README.md) | 总排名第 67，[blog](https://blog.lxdlam.com/post/f37e3945/) | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房（Level 0、Level 1）、助记词（第一顿大餐）、Co-Program（Co-Login）|
+| [Vifly](https://viflythink.com/Hackergame_2021_writeups/) | | 签到，进制十六——参上，猫咪问答 Pro Max，卖瓜，Amnesia （轻度失忆），图之上的信息，加密的 U 盘，赛博厨房（LEVEL 0、LEVEL 1） |
 
 ## 其他资源
 
