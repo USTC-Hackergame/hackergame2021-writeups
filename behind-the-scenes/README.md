@@ -52,6 +52,10 @@
 
 ![](files/8.jpg)
 
+## 社会工程学
+
+![](files/15.jpg)
+
 ## 其他
 
 [知乎：中国科学技术大学 Linux 用户协会在近五年多少次被评为校五星级社团？](https://www.zhihu.com/question/494178119)
