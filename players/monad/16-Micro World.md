@@ -6,6 +6,8 @@
 
 接着继续尝试反编译，我这里找了 [zrax/pycdc](https://github.com/zrax/pycdc)，能够逆向 Python 3.9 的字节码，但不完全能逆向出来（但是至少能看到大致的逻辑，也能看到点的数据）。
 
+![](assets/microworld_decompile.png)
+
 这是 `2.pyc` 中 `Point` 的定义：
 
 ```python
