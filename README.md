@@ -57,6 +57,7 @@
 | - | - | - |
 | [mcfx](players/mcfx/writeup.md) | 总排名第一名 | 全部题目 |
 | [TonyCrane](https://blog.tonycrane.cc/p/c05d7b7c.html) | 总排名第二十二名 | 签到、十六进制、电波、猫咪问答、卖瓜、透明文件、旅行照片、大砍刀、图之上、赛博厨房-0/1、助记词-1、p😭q、Amnesia-1、RSA、LUKS、MicroWorld、阵列恢复、马赛克、minecRaft、密码生成器 |
+| [GZTime](players/GZTime/writeup.md) [博客](https://blog.gztime.cc/posts/2021/9f04efbd/) | 总排名第四名 | **除** 赛博厨房(2,3)、灯，等灯等灯(1,2)、只读文件系统、一石二鸟、链上预言家、外星人的音游掌机、Make a wish、什么叫无情的逆向机器 **外的全部题目** |
 | [宝硕](players/renbaoshuo/README.md) | 总排名第 264 名, [博客](https://blog.baoshuo.ren/post/ustc-hackergame-2021-write-up/) | 签到, 进制十六——参上, 去吧！追寻自由的电波, 旅行照片, FLAG 助力大红包, 猫咪问答 Pro Max, 卖瓜, 透明的文件, Amnesia/轻度失忆, 图之上的信息 |
 | [huggy](https://blog.huggy.moe/posts/2021/14-ustclug-ctf-writeup/) |总排名第六十九名|签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia（轻度失忆）、图之上的信息、加密的 U 盘、赛博厨房（Level 0、Level 1）、阵列恢复大师（raid5）、minecRaft、密码生成器|
 | [Henry-ZHR](players/Henry-ZHR/) | | 旅行照片，Co-Program |
