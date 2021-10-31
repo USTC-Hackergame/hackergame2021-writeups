@@ -7,13 +7,13 @@
 - python 3
 - Mathematica 12
 
-<br>
+
 
 ### 1. 签到
 
 不是去年的检查元素。观察发现 URL 会变，于是用二分法。
 
-<br>
+
 
 ### 2. 进制十六——参上
 
@@ -21,7 +21,7 @@
 
 这题的难点在于将十六进制数正确地输入编辑器，我就输错了很多次
 
-<br>
+
 
 ### 3. 去吧！追寻自由的电波
 
@@ -41,7 +41,7 @@ ans = Audio[AudioData[audio][[1]], SampleRate -> AudioSampleRate@audio / 2];
 
 这是 [字母解释法](https://baike.baidu.com/item/%E5%AD%97%E6%AF%8D%E8%A7%A3%E9%87%8A%E6%B3%95)。
 
-<br>
+
 
 ### 4. 猫咪问答 Pro Max
 
@@ -51,7 +51,7 @@ ans = Audio[AudioData[audio][[1]], SampleRate -> AudioSampleRate@audio / 2];
 4. 找到相应的文档 [SIGBOVIK 2021](http://sigbovik.org/2021/proceedings.pdf)，这篇文章的后 13 张图分别展示了一个数据集
 5. 查找该文档 [IETF : Establishing the Protocol Police](https://datatracker.ietf.org/doc/html/rfc8962#section-6)，注意是阅读正文部分的 Reporting Offenses，而不是末尾的 Email
 
-<br>
+
 
 ### 5. 卖瓜
 
@@ -59,7 +59,7 @@ ans = Audio[AudioData[audio][[1]], SampleRate -> AudioSampleRate@audio / 2];
 
 经试验，在 6 的地方输入 `3000000000000000000`，然后在 9 的地方输入 `49638230412172404` 即可
 
-<br>
+
 
 ### 6. 透明的文件
 
@@ -71,7 +71,7 @@ ans = Audio[AudioData[audio][[1]], SampleRate -> AudioSampleRate@audio / 2];
 
 <img src="image/6.png" alt="6" style="zoom:25%;" />
 
-<br>
+
 
 ### 7. 旅行照片
 
@@ -81,7 +81,7 @@ ans = Audio[AudioData[audio][[1]], SampleRate -> AudioSampleRate@audio / 2];
 
 后来再次按照 “KFC 沙滩 停车场” 进行搜索，确认是秦皇岛的。用百度地图查电话号码，用全景查左侧的文字。不过剩下 3 个迟迟无法确定，最后是用 `pyautogui` 辅助点击枚举出来的。
 
-<br>
+
 
 ### 8. FLAG 助力大红包
 
@@ -106,7 +106,7 @@ for i in range(256):
     time.sleep(1)
 ```
 
-<br>
+
 
 ### 9. Amnesia
 
@@ -135,7 +135,7 @@ int main() {
 
 > 官方题解里说可以直接 `putchar` 字符
 
-<br>
+
 
 ### 10. 图之上的信息
 
@@ -155,9 +155,11 @@ int main() {
 {"query":"query{ user(id: 1){id username privateEmail}}"}
 ```
 
-<br>
+
 
 ### 11. Easy RSA
+
+> 完整代码见 [11.wl](code/11/11.wl)	[11.py](code/11/11.py) 
 
 首先计算 `p` 。x 与 y 都是素数，可以使用 [威尔逊定理](https://baike.baidu.com/item/%E5%A8%81%E5%B0%94%E9%80%8A%E5%AE%9A%E7%90%86/1881444) $(p-1)! \equiv -1 \pmod{p}$
 
@@ -196,9 +198,7 @@ bytes = int.to_bytes(m, 28, byteorder='big')
 file.write(bytes)
 ```
 
-> 完整代码见 [11.wl](code/11/11.wl)	[11.py](code/11/11.py) 
 
-<br>
 
 ### 13. 赛博厨房
 
@@ -225,7 +225,7 @@ file.write(bytes)
 
 需要 73 个物品 0，而最多限制 72 行。只能使用 `如果手上的物品大于等于 n 向上跳转 m 行` 这条语句。
 
-> 观察示例程序执行记录发现该语句是说代码跳 `m` 行，而不是机器人移动多少步
+> 观察示例程序执行记录发现该语句是说代码跳 `m` 行，而不是说机器人移动多少步
 
 ```
 向右 1 步
@@ -236,13 +236,13 @@ file.write(bytes)
 如果手上的物品大于等于 1 向上跳转 1 行
 ```
 
-<br>
+
 
 ### 14. 灯，等灯等灯
 
 #### (1) LEVEL 0
 
-> 详细代码见 [14.wl](code/14.wl) 
+> 完整代码见 [14.wl](code/14.wl) 
 
 从网页的 js 文件中获得 `target` 矩阵
 
@@ -256,16 +256,14 @@ FindInstance[eqns, allC, Modulus -> 256]
 ```
 
 > 我一开始使用了较为复杂的方法（自行编程把变量减少到 24，因为对于这么多含 `Mod` 的方程，`FindInstance` 无法解出），后来发现加选项 `Modulus -> 256` 就可以了。
->
-> 写成矩阵计算会更快一些。
 
 然后使用 `pyautogui` 控制鼠标进行点击
 
-<br>
+
 
 ### 17. Micro World
 
-exe 这么大，怀疑是 python，用 IDA 中查找字符串证实了这一点
+exe 这么大，怀疑是 python，用 IDA 查找字符串证实了这一点
 
 使用 [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor) 可以获得 pyc 文件
 
@@ -275,11 +273,11 @@ exe 这么大，怀疑是 python，用 IDA 中查找字符串证实了这一点
 
 > 粒子初始化为 flag，程序记录了一段时间之后的运动情况
 
-观察大部分正确的 python 代码，应该不是非弹性碰撞（没有出现 0.9 之类的数字）。直接修改 fps 不会影响到运动状态，所以需要**把各点的速度反向**。
+观察大部分正确的 python 代码，发生的应该不是非弹性碰撞（没有出现 0.9 之类的数字）。经测试，直接修改 fps 不会影响到运动状态，所以只能**把各点的速度反向**。
 
-一开始想在较高层面（指令码）修改。将指令码转成 pyc 的工具有 xasm，但这个工具无法处理列表赋值的情况。所以只能**操作 pyc 字节码**。
+一开始想在较高层面（指令码）修改。将指令码转成 pyc 的工具有 xasm，但这个工具无法处理列表赋值的情况。所以只能**修改 pyc 字节码**。
 
-在 py 文件中修改符号。发现对于正数， pyc 中某个 `3B` 字节变为 `FB`，对于负数由 `FB` 变为 `3B`。
+在 py 文件中修改一些数字的符号，用 `python3 -m` 生成 pyc 文件。发现对于正数， pyc 中某个字节由 `3B` 变为 `FB` ；而对于负数，由 `FB` 变为 `3B`。
 
 编写 [trans.py](code/17/trans.py) ，主要逻辑如下，把中间间隔 8 个字符的一对 `3B`/`FB` 换成相反的。
 
@@ -296,7 +294,7 @@ for i in range(len(data)):
         ansData.append(0x3F + 0xBF - data[i])
 ```
 
-> 位置不会被改变符号可能是因为绝对值比较大
+> 位置不会被改变符号可能是因为其绝对值比较大
 
 用 [check.py](code/17/check.py) 检查指令码，发现多修改了一处，手动改回来。`diff` 确认指令码没有问题
 
@@ -304,7 +302,7 @@ for i in range(len(data)):
 
 <img src="image/17.png" alt="17" style="zoom: 50%;" />
 
-<br>
+
 
 ### 23. 马赛克
 
@@ -337,7 +335,7 @@ Table[ans[i] = inferSolve /@ eqns[i] // Flatten // Union;
 
 虽然还剩余一部分没有解出，但在此 QR 码的容错范围内。
 
-<br>
+
 
 ### 25. 密码生成器
 
@@ -345,9 +343,9 @@ Table[ans[i] = inferSolve /@ eqns[i] // Flatten // Union;
 
 注意到密码生成器没有提供任何输入，且每次运行都有较长的延迟，更奇怪的是，题目中每句话都不离时间：
 
-> 网页显示时间的时区改到了 Asia/Shanghai，我说怎么打印出来总是差 8 个小时。
-> 【由用户 admin 于 2021-09-22 23:40 发布】
-> 【由用户 admin 于 2021-09-22 23:39 发布】
+> 网页显示时间的时区改到了 Asia/Shanghai，我说怎么打印出来总是差 8 个小时。  
+> 【由用户 admin 于 2021-09-22 23:40 发布】  
+> 【由用户 admin 于 2021-09-22 23:39 发布】  
 > 于 2021-09-22 23:11 注册
 
 怀疑生成的密码和**系统时间**有关。经测试，在相同的秒数会显示相同的密码。
@@ -383,13 +381,13 @@ for i in range(60):
 
 > IDA 也就图一乐，真做逆向还得靠 `pyautogui`
 
-<br>
+
 
 ### 27. JUST BE FUN
 
 解题过程：读代码，写代码（建议将 python 文件中的背景字符换成空格，合理使用 Insert 键），调代码（条件断点）。  
-此题要求：写一个三维空间的程序，读入 9 以下的数字和 6 种运算符计算。  
-主要思路：先读一个操作数，读入运算符，按运算符进行分类计算。
+此题要求：写一个三维空间的程序，读入 9 以下的数字和 6 种运算符，计算结果。  
+主要思路：先读一个操作数，读入运算符，按运算符进行分类读入操作数并计算，再读下一个运算符……
 
 调试结果为 [1++](code/27/1++) 
 
