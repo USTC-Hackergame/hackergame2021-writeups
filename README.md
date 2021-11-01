@@ -98,6 +98,7 @@
 | [ReinWD](https://github.com/ReinWD/hackergame2021_writeup/blob/main/writeup.md) | 总排名 560 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，赛博厨房（LEVEL 0、LEVEL 1、LEVEL2） |
 | [tl2cents](players/tl2cents/README.md)  [博客](https://tl2cents.github.io/2021/10/31/Hackgame2021/) | 总排名第 70 | FLAG 助力大红包，图之上的信息，Easy RSA，马赛克，Minecraft，超 OI 的 Writeup 模拟器（前两问） |
 | [EarthC](players/EarthC/) | 总排名第 26 名 | 灯，等灯等灯, 超 OI 的 Writeup 模拟器(部分) |
+| [cvhc](players/cvhc/README.md) | 总排名第 13 名 | 阵列恢复大师，马赛克，Amnesia，只读文件系统，minecRaft，Micro World，fzuu，密码生成器，一石二鸟，p😭q |
 
 ## 其他资源
 
