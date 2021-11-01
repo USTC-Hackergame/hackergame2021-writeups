@@ -95,6 +95,7 @@
 | [lxdlam](players/lxdlam/README.md) | 总排名第 67，[blog](https://blog.lxdlam.com/post/f37e3945/) | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia、图之上的信息、Easy RSA、加密的 U 盘、赛博厨房（Level 0、Level 1）、助记词（第一顿大餐）、Co-Program（Co-Login）|
 | [Vifly](https://viflythink.com/Hackergame_2021_writeups/) | | 签到，进制十六——参上，猫咪问答 Pro Max，卖瓜，Amnesia （轻度失忆），图之上的信息，加密的 U 盘，赛博厨房（LEVEL 0、LEVEL 1） |
 | [tkmk](players/tkmk/) | 总排名第 9 名 | 赛博厨房（LEVEL 3 非预期） |
+| [ReinWD](https://github.com/ReinWD/hackergame2021_writeup/blob/main/writeup.md) | 总排名 560 | 签到，进制十六——参上，去吧！追寻自由的电波，猫咪问答 Pro Max，赛博厨房（LEVEL 0、LEVEL 1、LEVEL2） |
 
 ## 其他资源
 
