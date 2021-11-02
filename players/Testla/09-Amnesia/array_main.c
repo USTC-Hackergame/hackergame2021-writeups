@@ -1,0 +1,32 @@
+const char main[] = {
+    0x55,                               // push   %ebp
+    0x89, 0xe5,                         // mov    %esp,%ebp
+    0x56,                               // push   %esi
+    0x53,                               // push   %ebx
+    0xe8, 0x28, 0x00, 0x00, 0x00,       // call   11bb <__x86.get_pc_thunk.ax>
+    0x05, 0x6d, 0x2e, 0x00, 0x00,       // add    $0x2e6d,%eax
+    0x8d, 0xb0, 0x2d, 0x00, 0x00, 0x00, // lea    0x2D(%eax),%esi
+    0xb8, 0x04, 0x00, 0x00, 0x00,       // mov    $0x4,%eax
+    0xbb, 0x01, 0x00, 0x00, 0x00,       // mov    $0x1,%ebx
+    0x89, 0xf1,                         // mov    %esi,%ecx
+    0xba, 0x0e, 0x00, 0x00, 0x00,       // mov    $0xe,%edx
+    0xcd, 0x80,                         // int    $0x80
+    0xb8, 0x00, 0x00, 0x00, 0x00,       // mov    $0x0,%eax
+    0x90,                               // nop
+    0x5b,                               // pop    %ebx
+    0x5e,                               // pop    %esi
+    0x5d,                               // pop    %ebp
+    0xc3,                               // ret    
+    // 000011bb <__x86.get_pc_thunk.ax>:
+    0x8b, 0x04, 0x24,                   // mov    (%esp),%eax
+    0xc3,                               // ret    
+    0x90,                               // nop
+    // "Hello, world\n"
+    0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x2c, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21, 0x0a
+    //0xb8, 0x00, 0x00, 0x00, 0x00,       // mov    $0x0,%eax
+    //0xc3,                               // ret    
+    //0x90,                               // nop
+    //0x90,                               // nop
+    //0x90,                               // nop
+    //0x90,                               // nop
+};
