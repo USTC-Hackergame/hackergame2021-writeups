@@ -100,6 +100,7 @@
 | [EarthC](players/EarthC/) | 总排名第 26 名 | 灯，等灯等灯, 超 OI 的 Writeup 模拟器(部分) |
 | [cvhc](players/cvhc/README.md) | 总排名第 13 名 | 阵列恢复大师，马赛克，Amnesia，只读文件系统，minecRaft，Micro World，fzuu，密码生成器，一石二鸟，p😭q |
 | [Testla](players/Testla/) | 总排名第 43 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、透明的文件、旅行照片、FLAG 助力大红包、Amnesia - 轻度失忆、图之上的信息、加密的 U 盘、赛博厨房 - Level0, Level1、Co-Program - Co-UnitTest、马赛克、minecRaft、p😭q、超 OI 的 Writeup 模拟器 - 果然还是逆向比较简单 |
+| [iriszero](players/iriszero) | 总排名第 105 名 | 去吧！追寻自由的电波、Easy RSA |
 
 ## 其他资源
 
