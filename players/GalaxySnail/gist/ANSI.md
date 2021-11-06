@@ -1,3 +1,6 @@
+
+[comment]: # (https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797/be1f5afaeb7996c5d966039d88108f45b0f58e0f)
+
 # ANSI Escape Sequences
 
 Standard escape codes are prefixed with `Escape`:
