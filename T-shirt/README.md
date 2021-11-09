@@ -28,7 +28,7 @@
 
 ## 版权声明
 
-对于纪念衫前部图案（[粉色猫猫](files/neko-pink.svg)、[绿色猫猫](files/neko-green.svg) 与 [网格](files/lug-grid.png)），许可证为：[知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)。这意味着你可以**随意分享**和**自由更改**，只是不能**商业使用**~~（例如印纪念衫然后销售赚钱）~~。
+对于纪念衫前部图案（[粉色猫猫](files/neko-pink.png)、[绿色猫猫](files/neko-green.png) 与 [网格](files/lug-grid.png)），许可证为：[知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)。这意味着你可以**随意分享**和**自由更改**，只是不能**商业使用**~~（例如印纪念衫然后销售赚钱）~~。
 
 对于纪念衫背部的 [Hackergame 官方 logo](files/hg_2021-logo.png)， 许可证为：All rights reserved。这意味中你**不能**对其进行随意更改/使用，即使是非商业用途也不行。当然，在本次 Hackergame 2021 纪念衫的自行印制过程中使用它并没有问题，并且出于适应背景颜色将黑色部分全部替换成白色也没有问题。
 
