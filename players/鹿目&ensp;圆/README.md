@@ -69,13 +69,13 @@ ans = Audio[AudioData[audio][[1]], SampleRate -> AudioSampleRate@audio / 2];
 
 后来偶然间（为第 17 题装的 conda 导致环境变量有问题，错误提示恰好把前两行占掉了）发现运行命令后左边的文字有些不寻常，于是
 
-<img src="image/6.png" alt="6" style="zoom:25%;" />
+<img src="image/6.png" alt="6" width="50%" />
 
 
 
 ### 7. 旅行照片
 
-查阅资料意识到根据街景识别几乎不可能。起初以为地点藏在图像的 Exif 数据里，虽然我看到了“未采取隐写措施”
+查阅资料意识到根据街景识别几乎不可能。起初以为地点藏在图像的 Exif 数据里，虽然我看到了“未采取隐写措施”。
 
 题目中多次出现了 “KFC”，我一开始就查到了但当时不认为是同一个，于是开始沿着海岸线找……
 
@@ -300,7 +300,7 @@ for i in range(len(data)):
 
 运行，使用 VLC 录屏并逐帧查看
 
-<img src="image/17.png" alt="17" style="zoom: 50%;" />
+<img src="image/17.png" alt="17" width="50%" />
 
 
 
