@@ -103,6 +103,8 @@
 | [iriszero](players/iriszero) | 总排名第 105 名 | 去吧！追寻自由的电波、Easy RSA |
 | [GalaxySnail](players/GalaxySnail) | 总排名第 168 名 | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、**透明的文件**、旅行照片、FLAG 助力大红包、Amnesia - 轻度失忆、图之上的信息、赛博厨房 Level 0、赛博厨房 Level 1、**赛博厨房 Level 2** |
 | [W4ter](players/W4ter) | 总排名第 226，[blog](https://gksec.com/Hackergame2021.html) | 签到、进制十六——参上、去吧！追寻自由的电波、猫咪问答 Pro Max、卖瓜、旅行照片、FLAG 助力大红包、Amnesia - 轻度失忆、图之上的信息、赛博厨房 Level 0 |
+| [MiaoTony](https://miaotony.xyz/2021/11/03/CTF_2021Hackergame/?utm_source=github) | 总排名第 77 名 | 签到，进制十六——参上，去吧！追寻自由的电波，卖瓜，猫咪问答 Pro Max，透明的文件，旅行照片，FLAG 助力大红包，Amnesia(轻度失忆)，图之上的信息，加密的 U 盘，赛博厨房(Level 0, Level 1)，阵列恢复大师，minecRaft，Micro World 等 （主要记录了解题的过程，包含了不少做题时候的心得，~~有一堆废话~~） |
+
 
 ## 其他资源
 
