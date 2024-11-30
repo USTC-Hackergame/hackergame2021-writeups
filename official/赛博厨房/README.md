@@ -4,7 +4,7 @@
 
 题解编辑：[Hypercube](https://0x01.me/)
 
-出题人、验题人、文案设计等：见 [Hackergame 2021 幕后工作人员](https://hack.lug.ustc.edu.cn/credits/)。
+出题人、验题人、文案设计等：见 [Hackergame 2021 幕后工作人员](../../credits.pdf)。
 
 ## 题目描述
 
